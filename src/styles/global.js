@@ -27,6 +27,22 @@ injectGlobal`
     height: 100%;
   }
 
+  .sidebar {
+    float: left;
+    width 25%;
+  }
+
+  .siteContent {
+    float: left;
+    width: 75%;
+  }
+
+  .siteRoot:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
   article, aside, details, figcaption, figure,
   footer, header, hgroup, menu, nav, section {
     display: block;
