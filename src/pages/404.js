@@ -20,8 +20,8 @@ const NotFoundPage = () => (
     </Helmet>
 
     <Container>
-      <PageTitle>Not found</PageTitle>
-      <Wrapper>YThe page you're looking for doesn't exist (yet).</Wrapper>
+      <PageTitle>Page not found</PageTitle>
+      <Wrapper>The page you're looking for doesn't exist (yet).</Wrapper>
     </Container>
   </div>
 )
