@@ -5,9 +5,12 @@ import PageTitle from '../components/PageTitle'
 import styled from 'styled-components'
 import Container from '../components/Container'
 
-const Wrapper = styled.h3`
+const Wrapper = styled.p`
   color: white;
   text-align: center;
+  font-size: 2em;
+  padding: 0.5em;
+  font-weight: 100;
 `
 
 const NotFoundPage = () => (
@@ -18,7 +21,7 @@ const NotFoundPage = () => (
 
     <Container>
       <PageTitle>Not found</PageTitle>
-      <Wrapper>You just hit a route that doesn't exist... the sadness.</Wrapper>
+      <Wrapper>YThe page you're looking for doesn't exist (yet).</Wrapper>
     </Container>
   </div>
 )
