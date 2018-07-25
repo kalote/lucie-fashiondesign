@@ -1,5 +1,5 @@
 import { injectGlobal } from 'styled-components'
-import HPImage from '../images/homepage.jpg';
+import HPImage from '../images/homepage_blur.jpg';
 
 injectGlobal`
   html, body, div, span, applet, object, iframe,
@@ -34,7 +34,7 @@ injectGlobal`
 
   .siteContent {
     float: left;
-    width: 75%;
+    width: 100%;
   }
 
   .siteRoot:after {

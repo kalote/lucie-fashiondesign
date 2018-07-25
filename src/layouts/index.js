@@ -24,9 +24,6 @@ const Template = ({ children }) => {
       </Helmet>
 
       <ThemeProvider theme={theme}>
-        <div className="sidebar">
-          <Menu />
-        </div>
         <div className="siteContent">
           {children()}
         </div>
