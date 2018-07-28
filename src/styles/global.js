@@ -1,5 +1,6 @@
 import { injectGlobal } from 'styled-components'
 import HPImage from '../images/homepage.jpg';
+import AvenirFont from '../font/Avenir.woff';
 
 injectGlobal`
   html, body, div, span, applet, object, iframe,
@@ -29,15 +30,15 @@ injectGlobal`
 
   .sidebar {
     float: left;
-    width 25%;
+    width: 15%;
   }
 
   .siteContent {
     float: left;
-    width: 75%;
+    width: 85%;
   }
 
-  .siteRoot:after {
+  .row:after {
     content: "";
     display: table;
     clear: both;
@@ -78,14 +79,21 @@ injectGlobal`
     box-sizing: border-box;
   }
 
+  @font-face {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: normal;
+    src: url('${AvenirFont}') format('woff');
+  }
+
   body {
     line-height: 1;
     font-size: 100%;
     font-variant-ligatures: none;
     text-rendering: optimizeLegibility;
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
-    font-weight: 400;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: normal;
+    font-family: "Avenir";
   }
 
   img {
