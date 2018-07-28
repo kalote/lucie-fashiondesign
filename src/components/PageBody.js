@@ -3,7 +3,11 @@ import styled from 'styled-components'
 
 const Body = styled.div`
   margin: 0 auto;
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
+  max-width: 650px;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #3f3f3f;
+  padding: 10px;
 
   h1,
   h2,
@@ -31,9 +35,9 @@ const Body = styled.div`
 
   a {
     transition: 0.2s;
-    color: ${props => props.theme.colors.base};
+    color: #fff;
     &:hover {
-      color: ${props => props.theme.colors.highlight};
+      color: #000;
     }
   }
 
@@ -76,13 +80,13 @@ const Body = styled.div`
 
   hr {
     border-style: solid;
-    border-color: ${props => props.theme.colors.secondary};
+    border-color: #afafaf;
     margin: 0 0 2em 0;
   }
 
   blockquote {
     font-style: italic;
-    border-left: 4px solid ${props => props.theme.colors.secondary};
+    border-left: 4px solid #afafaf;
     padding: 0 0 0 0.5em;
   }
 `

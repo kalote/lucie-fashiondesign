@@ -10,7 +10,7 @@ import 'whatwg-fetch' // Fetch Polyfill
 */
 
 const Form = styled.form`
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
+  max-width: 650px;
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
@@ -22,8 +22,9 @@ const Form = styled.form`
     font-size: inherit;
     border: none;
     outline: none;
-    background: ${props => props.theme.colors.tertiary};
-    color: ${props => props.theme.colors.base};
+    border: 1px solid #3f3f3f;
+    background: #fff;
+    color: #afafaf;
     border-radius: 2px;
     padding: 1em;
     &::-webkit-input-placeholder {
@@ -63,7 +64,7 @@ const Form = styled.form`
 const Name = styled.input`
   margin: 0 0 1em 0;
   width: 100%;
-  @media (min-width: ${props => props.theme.responsive.small}) {
+  @media (min-width: 35em) {
     width: 49%;
   }
 `
@@ -71,7 +72,7 @@ const Name = styled.input`
 const Email = styled.input`
   margin: 0 0 1em 0;
   width: 100%;
-  @media (min-width: ${props => props.theme.responsive.small}) {
+  @media (min-width: 35em) {
     width: 49%;
   }
 `
@@ -85,12 +86,12 @@ const Message = styled.textarea`
 `
 
 const Submit = styled.input`
-  background: ${props => props.theme.colors.base} !important;
-  color: white !important;
+  background: #fff;
+  color: #afafaf;
   cursor: pointer;
   transition: 0.2s;
   &:hover {
-    background: ${props => props.theme.colors.highlight} !important;
+    color: #000;
   }
 `
 
@@ -111,7 +112,7 @@ const Modal = styled.div`
   transition: 0.2s all;
   opacity: ${props => (props.visible ? '1' : '0')};
   visibility: ${props => (props.visible ? 'visible' : 'hidden')};
-  @media screen and (min-width: ${props => props.theme.responsive.small}) {
+  @media screen and (min-width: 35em) {
     min-width: inherit;
     max-width: 400px;
   }
@@ -122,7 +123,7 @@ const Modal = styled.div`
 `
 
 const Button = styled.div`
-  background: ${props => props.theme.colors.base};
+  background: #fff;
   font-size: 1em;
   display: inline-block;
   margin: 0 auto;
@@ -139,7 +140,7 @@ const Button = styled.div`
     outline: none;
   }
   &:hover {
-    background: ${props => props.theme.colors.highlight};
+    background: #000;
   }
 `
 

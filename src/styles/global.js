@@ -1,6 +1,6 @@
 import { injectGlobal } from 'styled-components'
-import HPImage from '../images/homepage.jpg';
-import AvenirFont from '../font/Avenir.woff';
+import HPImage from '../images/homepage.jpg'
+import AvenirFont from '../font/Avenir.woff'
 
 injectGlobal`
   html, body, div, span, applet, object, iframe,
@@ -30,12 +30,12 @@ injectGlobal`
 
   .sidebar {
     float: left;
-    width: 15%;
+    width: 10%;
   }
 
   .siteContent {
     float: left;
-    width: 85%;
+    width: 90%;
   }
 
   .row:after {

@@ -3,13 +3,11 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 const Nav = styled.nav`
-  width: 130px;
-  border: 1px solid ${props => props.theme.colors.tertiary};
-  position: fixed;
+  width: 100%;
+  border: 1px solid #3f3f3f;
   z-index: 1;
-  top: 10px;
-  left: 10px;
-  background: ${props => props.theme.colors.base};
+  margin: 10px 0 0 10px;
+  background: #fff;
   overflow-x: hidden;
 
   ul {
@@ -24,18 +22,22 @@ const Nav = styled.nav`
 
   a {
     text-decoration: none;
-    color: ${props => props.theme.colors.secondary};
+    color: #afafaf;
     font-weight: 300;
     transition: all 0.3s;
-    
+    padding-left: 0;
+
     &:hover {
-      color: ${props => props.theme.colors.tertiary};
+      color: #3f3f3f;
+      font-weight: 600;
+      padding-left: 10px;
     }
   }
 
   .activeLink {
     font-weight: 600;
-    color: ${props => props.theme.colors.tertiary};
+    color: #3f3f3f;
+    padding-left: 10px;
   }
 `
 
@@ -45,7 +47,7 @@ const Menu = () => {
       <ul>
         <li>
           <Link to="/" exact activeClassName={'activeLink'}>
-              Home
+            Home
           </Link>
         </li>
         <li>
@@ -55,12 +57,12 @@ const Menu = () => {
         </li>
         <li>
           <Link to="/about/" activeClassName={'activeLink'}>
-              About
+            About
           </Link>
         </li>
         <li>
           <Link to="/contact/" activeClassName={'activeLink'}>
-              Contact
+            Contact
           </Link>
         </li>
       </ul>
