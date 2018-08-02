@@ -10,8 +10,8 @@ import 'whatwg-fetch' // Fetch Polyfill
 */
 
 const Form = styled.form`
-  max-width: 650px;
-  margin: 0 auto;
+  padding: 65px 10px 10px;
+  background-color: #fff;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -24,20 +24,20 @@ const Form = styled.form`
     outline: none;
     border: 1px solid #3f3f3f;
     background: #fff;
-    color: #afafaf;
+    color: #000;
     border-radius: 2px;
     padding: 1em;
     &::-webkit-input-placeholder {
-      color: gray;
+      color: #000;
     }
     &::-moz-placeholder {
-      color: gray;
+      color: #000;
     }
     &:-ms-input-placeholder {
-      color: gray;
+      color: #000;
     }
     &:-moz-placeholder {
-      color: gray;
+      color: #000;
     }
     &:required {
       box-shadow: none;
@@ -86,12 +86,12 @@ const Message = styled.textarea`
 `
 
 const Submit = styled.input`
-  background: #fff;
-  color: #afafaf;
+  color: #3f3f3f !important;
   cursor: pointer;
   transition: 0.2s;
   &:hover {
-    color: #000;
+    color: #fff !important;
+    background: #3f3f3f !important;
   }
 `
 

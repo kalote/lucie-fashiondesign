@@ -8,7 +8,6 @@ const Post = styled.li`
   border-radius: 2px;
   margin: 0 0 1em 0;
   width: 100%;
-  transition: background 0.2s;
   @media screen and (min-width: 35em) {
     flex: 0 0 49%;
     margin: 0 0 2vw 0;
@@ -16,19 +15,21 @@ const Post = styled.li`
   @media screen and (min-width: 50em) {
     flex: 0 0 32%;
   }
-  &:hover {
-    background: #3f3f3f;
-  }
   a {
     display: flex;
     flex-flow: column;
     height: 100%;
     width: 100%;
-    color: #fff;
+    color: #3f3f3f;
     text-decoration: none;
+    transition: all 0.2s;
     .gatsby-image-wrapper {
       height: 0;
       padding-bottom: 60%;
+    }
+    &:hover {
+      background: #3f3f3f;
+      color: #fff;
     }
   }
 `

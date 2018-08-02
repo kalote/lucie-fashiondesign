@@ -30,15 +30,19 @@ injectGlobal`
 
   .sidebar {
     float: left;
-    width: 10%;
+    width: 17%;
   }
 
   .siteContent {
     float: left;
-    width: 90%;
+    width: 83%;
   }
 
-  .row:after {
+  .siteRoot {
+    padding: 38px 0 0 38px;
+  }
+
+  .siteRoot:after {
     content: "";
     display: table;
     clear: both;
@@ -102,11 +106,20 @@ injectGlobal`
   	height: auto;
   }
 
-  html {
+  html:after {
+    content : "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
     background: url(${HPImage}) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    width: 100%;
+    height: 100%;
+    opacity : 0.6;
+    z-index: -1;
   }
 `

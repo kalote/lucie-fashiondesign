@@ -2,12 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Body = styled.div`
-  margin: 0 auto;
-  max-width: 650px;
   color: #000;
   background-color: #fff;
-  border: 1px solid #3f3f3f;
-  padding: 10px;
+  padding: 65px 10px 10px;
+  opacity: 1;
 
   h1,
   h2,

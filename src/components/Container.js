@@ -2,9 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.section`
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 3em 1.5em 2em;
+  margin: 0 38px 0 20px;
 `
 
 const Container = props => {
