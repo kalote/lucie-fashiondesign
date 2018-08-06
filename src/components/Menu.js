@@ -14,24 +14,31 @@ const Nav = styled.nav`
   li {
     display: block;
     width: 100%;
-    padding: 7px;
+    padding: 20px;
     text-transform: uppercase;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 1px;
+      background: #3f3f3f;
+      transition: width 0.3s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 
   a {
     text-decoration: none;
     color: #3f3f3f;
-    transition: all 0.3s;
-    padding-left: 0;
-
-    &:hover {
-      padding-left: 10px;
-    }
+    line-height: 2em;
   }
 
-  .activeLink {
-    color: #3f3f3f;
-    padding-left: 10px;
+  .activeLink li::after {
+    width: 100%;
   }
 `
 
@@ -39,21 +46,18 @@ const Menu = () => {
   return (
     <Nav>
       <ul>
-        <li>
-          <Link to="/portfolio/" exact activeClassName={'activeLink'}>
-            Portfolio
-          </Link>
-        </li>
-        <li>
-          <Link to="/about/" activeClassName={'activeLink'}>
-            About
-          </Link>
-        </li>
-        <li>
-          <Link to="/contact/" activeClassName={'activeLink'}>
-            Contact
-          </Link>
-        </li>
+        <Link to="/" exact activeClassName={'activeLink'}>
+          <li>Home</li>
+        </Link>
+        <Link to="/portfolio/" exact activeClassName={'activeLink'}>
+          <li>Portfolio</li>
+        </Link>
+        <Link to="/about/" activeClassName={'activeLink'}>
+          <li>About</li>
+        </Link>
+        <Link to="/contact/" activeClassName={'activeLink'}>
+          <li>Contact</li>
+        </Link>
       </ul>
     </Nav>
   )

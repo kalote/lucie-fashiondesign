@@ -30,12 +30,12 @@ injectGlobal`
 
   .sidebar {
     float: left;
-    width: 17%;
+    width: 15%;
   }
 
   .siteContent {
     float: left;
-    width: 83%;
+    width: 85%;
   }
 
   .siteRoot {
