@@ -28,6 +28,11 @@ export const query = graphql`
       title
       id
       slug
+      image {
+        sizes(maxWidth: 1800) {
+          ...GatsbyContentfulSizes_withWebp_noBase64
+        }
+      }
       body {
         childMarkdownRemark {
           html

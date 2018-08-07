@@ -1,6 +1,7 @@
 import { injectGlobal } from 'styled-components'
 import HPImage from '../images/homepage.jpg'
 import AvenirFont from '../font/Avenir.woff'
+import BaskerFont from '../font/LibreBaskerville-Regular.otf'
 
 injectGlobal`
   html, body, div, span, applet, object, iframe,
@@ -88,6 +89,13 @@ injectGlobal`
     font-style: normal;
     font-weight: normal;
     src: url('${AvenirFont}') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Baskerville';
+    font-style: normal;
+    font-weight: normal;
+    src: url('${BaskerFont}') format('otf');
   }
 
   body {

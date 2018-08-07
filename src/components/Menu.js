@@ -7,6 +7,19 @@ const Nav = styled.nav`
   background: #fff;
   overflow-x: hidden;
 
+  h2 {
+    font-family: 'Baskerville';
+    text-align: center;
+    font-size: 25px;
+    padding: 15px 0 10px;
+  }
+
+  h3 {
+    font-family: 'Baskerville';
+    text-align: center;
+    font-size: 18px;
+  }
+
   ul {
     padding: 10px;
   }
@@ -45,11 +58,13 @@ const Nav = styled.nav`
 const Menu = () => {
   return (
     <Nav>
+      <h2>Lucie Soriano.</h2>
+      <h3>Fashion designer</h3>
       <ul>
         <Link to="/" exact activeClassName={'activeLink'}>
           <li>Home</li>
         </Link>
-        <Link to="/portfolio/" exact activeClassName={'activeLink'}>
+        <Link to="/portfolio/" activeClassName={'activeLink'}>
           <li>Portfolio</li>
         </Link>
         <Link to="/about/" activeClassName={'activeLink'}>

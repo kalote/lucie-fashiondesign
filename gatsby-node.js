@@ -17,7 +17,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     `).then(result => {
       result.data.allContentfulPhotoGallery.edges.map(({ node }) => {
         createPage({
-          path: `${node.slug}/`,
+          path: `portfolio/${node.slug}/`,
           component: path.resolve(`./src/templates/gallery.js`),
           context: {
             slug: node.slug,

@@ -1,20 +1,12 @@
 import React from 'react'
-import styled, { keyframes } from 'styled-components'
-import Link from 'gatsby-link'
+import styled from 'styled-components'
 import Img from 'gatsby-image'
 
-const flash = keyframes`
-  0% {
-    opacity: .4;
-  }
-  100% {
-    opacity: 1;
-  }
-`
-
-const Post = styled.li`
+const Image = styled.li`
   margin: 0 0 1em 0;
   width: 100%;
+  align-self: center;
+  cursor: pointer;
 
   @media screen and (min-width: 35em) {
     flex: 0 0 49%;
@@ -36,21 +28,18 @@ const Post = styled.li`
       padding-bottom: 60%;
     }
     &:hover {
-      animation: ${flash} 1.5s;
       background: #3f3f3f;
       color: #fff;
     }
   }
 `
 
-const Card = props => {
+const CardImg = props => {
   return (
-    <Post>
-      <Link to={`/portfolio/${props.slug}/`}>
-        <Img sizes={props.image.sizes} backgroundColor={'#eeeeee'} />
-      </Link>
-    </Post>
+    <Image>
+      <Img sizes={props.image.sizes} backgroundColor={'#eeeeee'} />
+    </Image>
   )
 }
 
-export default Card
+export default CardImg

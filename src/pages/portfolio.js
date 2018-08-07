@@ -7,8 +7,6 @@ import Card from '../components/Card'
 import Container from '../components/Container'
 
 const Portfolio = ({ data }) => {
-  console.log(data)
-
   const { title, galleries, metaDescription } = data.contentfulPortfolio
 
   return (
@@ -20,7 +18,7 @@ const Portfolio = ({ data }) => {
 
       <Container>
         <PageTitle>{title}</PageTitle>
-        <CardList>
+        <CardList spaced>
           {galleries.map(gallery => (
             <Card
               key={gallery.id}

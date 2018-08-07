@@ -6,7 +6,8 @@ const Title = styled.h1`
   text-transform: capitalize;
   color: #3f3f3f;
   opacity: 0.7;
-  text-align: center;
+  text-align: left;
+  padding: 15px 50px;
   background-color: #fff;
   line-height: 1.2;
   span {
