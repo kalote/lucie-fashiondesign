@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import Link from 'gatsby-link'
 
 const Image = styled.li`
   margin: 0 0 1em 0;
@@ -23,13 +24,9 @@ const Image = styled.li`
     width: 100%;
     text-decoration: none;
     opacity: 1;
-    .gatsby-image-wrapper {
-      height: 0;
-      padding-bottom: 60%;
-    }
+    transition: all 0.3s;
     &:hover {
-      background: #3f3f3f;
-      color: #fff;
+      box-shadow: 0 0 10px #3f3f3f;
     }
   }
 `
@@ -37,7 +34,9 @@ const Image = styled.li`
 const CardImg = props => {
   return (
     <Image>
-      <Img sizes={props.image.sizes} backgroundColor={'#eeeeee'} />
+      <Link to={props.href} onClick={props.onClick}>
+        <Img sizes={props.image} backgroundColor={'#eeeeee'} />
+      </Link>
     </Image>
   )
 }

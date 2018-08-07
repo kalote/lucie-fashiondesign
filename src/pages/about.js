@@ -2,11 +2,11 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import PageTitle from '../components/PageTitle'
-import PageBody from '../components/PageBody'
+import PageAbout from '../components/PageAbout'
 import Container from '../components/Container'
 
 const About = ({ data }) => {
-  const { title, body } = data.contentfulPage
+  const { title, body, image } = data.contentfulPage
 
   return (
     <div>
@@ -16,7 +16,7 @@ const About = ({ data }) => {
 
       <Container>
         <PageTitle>{title}</PageTitle>
-        <PageBody body={body} />
+        <PageAbout body={body} image={image} />
       </Container>
     </div>
   )
