@@ -6,7 +6,6 @@ const Body = styled.div`
   color: #000;
   background-color: #fff;
   padding: 10px;
-  opacity: 1;
 `
 
 const Txt = styled.p`
