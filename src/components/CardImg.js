@@ -25,6 +25,11 @@ const Image = styled.li`
     text-decoration: none;
     opacity: 1;
     transition: all 0.3s;
+
+    .gatsby-image-wrapper {
+      max-height: 400px;
+    }
+
     &:hover {
       box-shadow: 0 0 10px #3f3f3f;
     }
