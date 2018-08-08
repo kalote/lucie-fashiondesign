@@ -31,12 +31,12 @@ injectGlobal`
 
   .sidebar {
     float: left;
-    width: 15%;
+    width: 17%;
   }
 
   .siteContent {
     float: left;
-    width: 85%;
+    width: 83%;
     margin-top: 55px;
   }
 
@@ -115,7 +115,7 @@ injectGlobal`
   	height: auto;
   }
 
-  html:after {
+  .siteRoot:after {
     content : "";
     display: block;
     position: fixed;
@@ -128,7 +128,14 @@ injectGlobal`
     background-size: cover;
     width: 100%;
     height: 100%;
-    opacity : 0.6;
     z-index: -1;
+  }
+
+  .siteRoot.noFilter:after {
+    opacity: 1;
+  }
+
+  .siteRoot.filter:after {
+    opacity: 0.6;
   }
 `

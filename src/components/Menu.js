@@ -47,6 +47,7 @@ const Nav = styled.nav`
   }
 
   a {
+    font-size: 14px;
     text-decoration: none;
     color: #3f3f3f;
     line-height: 2em;

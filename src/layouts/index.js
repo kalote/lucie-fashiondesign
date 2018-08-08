@@ -5,9 +5,11 @@ import '../styles/global'
 import Menu from '../components/Menu'
 // import favicon from '../images/favicon.ico'
 
-const Template = ({ children }) => {
+const Template = ({ children, location }) => {
+  console.log(location)
+  const opacityClass = location.pathname === '/' ? 'noFilter' : 'filter'
   return (
-    <div className="siteRoot">
+    <div className={`siteRoot ${opacityClass}`}>
       <Helmet>
         <title>{config.siteTitle}</title>
         <meta charSet="utf-8" />
