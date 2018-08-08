@@ -11,7 +11,7 @@ const Nav = styled.nav`
     font-family: 'Baskerville';
     text-align: center;
     font-size: 25px;
-    padding: 15px 0 10px;
+    padding: 15px 0 5px;
   }
 
   h3 {
@@ -27,8 +27,9 @@ const Nav = styled.nav`
   li {
     display: block;
     width: 100%;
-    padding: 20px;
+    padding: 5px;
     text-transform: uppercase;
+    font-style: italic;
 
     &::after {
       content: '';
@@ -37,6 +38,7 @@ const Nav = styled.nav`
       height: 1px;
       background: #3f3f3f;
       transition: width 0.3s;
+      margin-top: -5px;
     }
 
     &:hover::after {
@@ -64,11 +66,11 @@ const Menu = () => {
         <Link to="/" exact activeClassName={'activeLink'}>
           <li>Home</li>
         </Link>
+        <Link to="/about/" activeClassName={'activeLink'}>
+          <li>About me</li>
+        </Link>
         <Link to="/portfolio/" activeClassName={'activeLink'}>
           <li>Portfolio</li>
-        </Link>
-        <Link to="/about/" activeClassName={'activeLink'}>
-          <li>About</li>
         </Link>
         <Link to="/contact/" activeClassName={'activeLink'}>
           <li>Contact</li>

@@ -37,6 +37,7 @@ injectGlobal`
   .siteContent {
     float: left;
     width: 85%;
+    margin-top: 55px;
   }
 
   .siteRoot {
