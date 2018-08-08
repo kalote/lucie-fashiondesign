@@ -6,15 +6,21 @@ const Body = styled.div`
   color: #000;
   background-color: #fff;
   padding: 10px;
+  overflow: auto;
+  display: flex;
+  flex-flow: row wrap;
 `
 
 const Txt = styled.p`
-  display: block;
-  float: left;
-  width: 65%;
+  flex: 0 0 65%;
   padding: 20px;
   line-height: 2em;
   font-size: 18px;
+`
+
+const Image = styled.div`
+  align-self: center;
+  flex: 0 0 35%;
 `
 
 const Card = props => {
@@ -25,8 +31,9 @@ const Card = props => {
           __html: props.body.childMarkdownRemark.html,
         }}
       />
-
-      <Img sizes={props.image.sizes} backgroundColor={'#eeeeee'} />
+      <Image>
+        <Img sizes={props.image.sizes} backgroundColor={'#eeeeee'} />
+      </Image>
     </Body>
   )
 }
