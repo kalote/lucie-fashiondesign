@@ -15,12 +15,24 @@ const Txt = styled.p`
   flex: 0 0 65%;
   padding: 20px;
   line-height: 2em;
-  font-size: 18px;
+  font-size: 16px;
+
+  & p {
+    margin-bottom: 15px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    flex: 0 0 100%;
+  }
 `
 
 const Image = styled.div`
   align-self: center;
   flex: 0 0 35%;
+
+  @media only screen and (max-width: 768px) {
+    flex: 0 0 100%;
+  }
 `
 
 const Card = props => {

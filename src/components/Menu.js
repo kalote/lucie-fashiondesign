@@ -58,26 +58,110 @@ const Nav = styled.nav`
   }
 `
 
+const Navigation = styled.section`
+  .toggle-menu ul {
+    display: table;
+    width: 60px;
+    background: #fff;
+    opacity: 0.8;
+    padding: 10px;
+  }
+  .toggle-menu ul li {
+    width: 100%;
+    height: 5px;
+    background-color: #3f3f3f;
+    margin-bottom: 6px;
+  }
+  .toggle-menu ul li:last-child {
+    margin-bottom: 0px;
+  }
+
+  input[type='checkbox'],
+  label {
+    display: none;
+  }
+
+  @media only screen and (max-width: 980px) {
+    input[type='checkbox'] {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+      background: none;
+    }
+    input[type='checkbox']:focus {
+      background: none;
+    }
+    label {
+      float: left;
+      display: inline-block;
+      cursor: pointer;
+    }
+    input[type='checkbox']:checked {
+      & ~ nav {
+        height: 300px;
+        opacity: 1;
+      }
+
+      & + .toggle-menu ul {
+        opacity: 1;
+      }
+    }
+
+    nav {
+      transition: all 0.4s;
+      height: 0;
+      position: absolute;
+      left: 10px;
+      top: 57px;
+      width: 40%;
+      background-color: #fff;
+      opacity: 0;
+      padding: 0px;
+      z-index: 99;
+
+      & ul {
+        width: auto;
+      }
+
+      & a {
+        font-size: 20px;
+
+        &.activeLink li::after {
+          width: 0;
+        }
+      }
+    }
+  }
+`
+
 const Menu = () => {
   return (
-    <Nav>
-      <h2>Lucie Soriano.</h2>
-      <h3>Fashion designer</h3>
-      <ul>
-        <Link to="/" exact activeClassName={'activeLink'}>
-          <li>Home</li>
-        </Link>
-        <Link to="/about/" activeClassName={'activeLink'}>
-          <li>About me</li>
-        </Link>
-        <Link to="/portfolio/" activeClassName={'activeLink'}>
-          <li>Portfolio</li>
-        </Link>
-        <Link to="/contact/" activeClassName={'activeLink'}>
-          <li>Contact</li>
-        </Link>
-      </ul>
-    </Nav>
+    <Navigation>
+      <input type="checkbox" id="toggle-1" />
+      <label htmlFor="toggle-1" className="toggle-menu">
+        <ul>
+          <li /> <li /> <li />
+        </ul>
+      </label>
+      <Nav>
+        <h2>Lucie Soriano.</h2>
+        <h3>Fashion designer</h3>
+        <ul>
+          <Link to="/" exact activeClassName={'activeLink'}>
+            <li>Home</li>
+          </Link>
+          <Link to="/about/" activeClassName={'activeLink'}>
+            <li>About me</li>
+          </Link>
+          <Link to="/portfolio/" activeClassName={'activeLink'}>
+            <li>Portfolio</li>
+          </Link>
+          <Link to="/contact/" activeClassName={'activeLink'}>
+            <li>Contact</li>
+          </Link>
+        </ul>
+      </Nav>
+    </Navigation>
   )
 }
 

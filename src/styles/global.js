@@ -31,17 +31,26 @@ injectGlobal`
 
   .sidebar {
     float: left;
-    width: 17%;
+    width: 300px;
+    @media only screen and (max-width: 980px) {
+      width: auto;
+    }
   }
 
   .siteContent {
-    float: left;
-    width: 83%;
+    margin-left: 300px;
     margin-top: 55px;
+
+    @media only screen and (max-width: 980px) {
+      margin-left: 0;
+    }
   }
 
   .siteRoot {
     padding: 38px 0 0 38px;
+    @media only screen and (max-width: 980px) {
+      padding: 10px;
+    }
   }
 
   .siteRoot:after {
@@ -128,6 +137,7 @@ injectGlobal`
     background-size: cover;
     width: 100%;
     height: 100%;
+    transition: opacity 0.3s;
     z-index: -1;
   }
 
