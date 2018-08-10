@@ -14,7 +14,7 @@ const Body = styled.div`
 const Txt = styled.p`
   flex: 0 0 65%;
   padding: 20px;
-  line-height: 2em;
+  line-height: 1em;
   font-size: 16px;
 
   & p {

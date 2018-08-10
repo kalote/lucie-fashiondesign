@@ -6,7 +6,6 @@ import Menu from '../components/Menu'
 // import favicon from '../images/favicon.ico'
 
 const Template = ({ children, location }) => {
-  console.log(location)
   const opacityClass = location.pathname === '/' ? 'noFilter' : 'filter'
   return (
     <div className={`siteRoot ${opacityClass}`}>

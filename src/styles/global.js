@@ -31,7 +31,7 @@ injectGlobal`
 
   .sidebar {
     float: left;
-    width: 300px;
+    width: 250px;
     @media only screen and (max-width: 980px) {
       width: auto;
     }
@@ -137,7 +137,7 @@ injectGlobal`
     background-size: cover;
     width: 100%;
     height: 100%;
-    transition: opacity 0.3s;
+    transition: opacity 1s;
     z-index: -1;
   }
 

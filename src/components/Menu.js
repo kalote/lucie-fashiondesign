@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
@@ -18,6 +18,7 @@ const Nav = styled.nav`
     font-family: 'Baskerville';
     text-align: center;
     font-size: 18px;
+    padding-bottom: 35px;
   }
 
   ul {
@@ -133,36 +134,60 @@ const Navigation = styled.section`
     }
   }
 `
+class Menu extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isChecked: false
+    }
+  }
 
-const Menu = () => {
-  return (
-    <Navigation>
-      <input type="checkbox" id="toggle-1" />
-      <label htmlFor="toggle-1" className="toggle-menu">
-        <ul>
-          <li /> <li /> <li />
-        </ul>
-      </label>
-      <Nav>
-        <h2>Lucie Soriano.</h2>
-        <h3>Fashion designer</h3>
-        <ul>
-          <Link to="/" exact activeClassName={'activeLink'}>
-            <li>Home</li>
-          </Link>
-          <Link to="/about/" activeClassName={'activeLink'}>
-            <li>About me</li>
-          </Link>
-          <Link to="/portfolio/" activeClassName={'activeLink'}>
-            <li>Portfolio</li>
-          </Link>
-          <Link to="/contact/" activeClassName={'activeLink'}>
-            <li>Contact</li>
-          </Link>
-        </ul>
-      </Nav>
-    </Navigation>
-  )
+  handleChange = (e) => {
+    this.setState({
+      isChecked: e.target.value
+    })
+  }
+
+  hideCheckbox = () => {
+    this.setState({
+      isChecked: false
+    })
+  }
+
+  render() {
+    return (
+      <Navigation>
+        <input
+          type="checkbox"
+          id="toggle-1"
+          checked={this.state.isChecked}
+          onChange={this.handleChange} />
+        <label htmlFor="toggle-1" className="toggle-menu">
+          <ul>
+            <li /> <li /> <li />
+          </ul>
+        </label>
+        <Nav>
+          <h2>Lucie Soriano.</h2>
+          <h3>Fashion designer</h3>
+          <ul>
+            <Link to="/" exact activeClassName={'activeLink'} onClick={this.hideCheckbox}>
+              <li>Home</li>
+            </Link>
+            <Link to="/about/" activeClassName={'activeLink'} onClick={this.hideCheckbox}>
+              <li>About me</li>
+            </Link>
+            <Link to="/portfolio/" activeClassName={'activeLink'} onClick={this.hideCheckbox}>
+              <li>Portfolio</li>
+            </Link>
+            <Link to="/contact/" activeClassName={'activeLink'} onClick={this.hideCheckbox}>
+              <li>Contact</li>
+            </Link>
+          </ul>
+        </Nav>
+      </Navigation>
+    )
+  }
 }
 
 export default Menu

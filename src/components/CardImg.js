@@ -26,10 +26,6 @@ const Image = styled.li`
     opacity: 1;
     transition: all 0.3s;
 
-    .gatsby-image-wrapper {
-      max-height: 400px;
-    }
-
     &:hover {
       box-shadow: 0 0 10px #3f3f3f;
     }
@@ -40,7 +36,7 @@ const CardImg = props => {
   return (
     <Image>
       <Link to={props.href} onClick={props.onClick}>
-        <Img sizes={props.image} backgroundColor={'#eeeeee'} />
+        <Img sizes={props.image} />
       </Link>
     </Image>
   )

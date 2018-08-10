@@ -145,8 +145,8 @@ export const query = graphql`
       images {
         id
         photo {
-          sizes(maxWidth: 1800) {
-            ...GatsbyContentfulSizes_withWebp_noBase64
+          sizes(maxHeight: 1200) {
+            ...GatsbyContentfulSizes_withWebp
           }
         }
       }

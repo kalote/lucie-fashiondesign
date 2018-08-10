@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const List = styled.ul`
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #fff;
   padding: ${props => (props.spaced ? '80px 10px' : '65px 10px 10px')};
 

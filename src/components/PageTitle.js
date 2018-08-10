@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Title = styled.h1`
-  font-size: 2em;
+  font-size: 1.8em;
   text-transform: capitalize;
   color: #3f3f3f;
   opacity: 0.8;
   text-align: left;
-  padding: 15px 50px;
+  padding: 7px 30px;
   background-color: #fff;
   line-height: 1.2;
   span {
