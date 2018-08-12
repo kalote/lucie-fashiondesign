@@ -12,6 +12,10 @@ const Nav = styled.nav`
     text-align: center;
     font-size: 25px;
     padding: 15px 0 5px;
+
+    @media only screen and (max-width: 980px) {
+      display: none;
+    }
   }
 
   h3 {
@@ -19,6 +23,10 @@ const Nav = styled.nav`
     text-align: center;
     font-size: 18px;
     padding-bottom: 35px;
+
+    @media only screen and (max-width: 980px) {
+      display: none;
+    }
   }
 
   ul {
@@ -99,7 +107,7 @@ const Navigation = styled.section`
     }
     input[type='checkbox']:checked {
       & ~ nav {
-        height: 300px;
+        height: 210px;
         opacity: 1;
       }
 
@@ -143,8 +151,8 @@ class Menu extends Component {
   }
 
   handleChange = (e) => {
-    this.setState({
-      isChecked: e.target.value
+    this.setState((prevState) => {
+      return { isChecked: !prevState.isChecked }
     })
   }
 
