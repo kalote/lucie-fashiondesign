@@ -22,7 +22,7 @@ const Nav = styled.nav`
     font-family: 'Baskerville';
     text-align: center;
     font-size: 18px;
-    padding-bottom: 35px;
+    padding-bottom: 50px;
 
     @media only screen and (max-width: 980px) {
       display: none;
@@ -36,9 +36,17 @@ const Nav = styled.nav`
   li {
     display: block;
     width: 100%;
-    padding: 5px;
+    padding: 10px;
     text-transform: uppercase;
     font-style: italic;
+  }
+
+  a {
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #3f3f3f;
+    line-height: 1em;
+    display: block;
 
     &::after {
       content: '';
@@ -48,22 +56,20 @@ const Nav = styled.nav`
       background: #3f3f3f;
       transition: width 0.3s;
       margin-top: -5px;
+      margin-left: 10px;
     }
 
     &:hover::after {
-      width: 100%;
+      width: 90%;
+    }
+
+    &:last-child {
+      margin-bottom: 20px;
     }
   }
 
-  a {
-    font-size: 14px;
-    text-decoration: none;
-    color: #3f3f3f;
-    line-height: 2em;
-  }
-
-  .activeLink li::after {
-    width: 100%;
+  .activeLink::after {
+    width: 90%;
   }
 `
 
@@ -107,7 +113,7 @@ const Navigation = styled.section`
     }
     input[type='checkbox']:checked {
       & ~ nav {
-        height: 210px;
+        height: 150px;
         opacity: 1;
       }
 
@@ -133,7 +139,7 @@ const Navigation = styled.section`
       }
 
       & a {
-        font-size: 20px;
+        font-size: 1em;
 
         &.activeLink li::after {
           width: 0;
@@ -183,7 +189,7 @@ class Menu extends Component {
               <li>Home</li>
             </Link>
             <Link to="/about/" activeClassName={'activeLink'} onClick={this.hideCheckbox}>
-              <li>About me</li>
+              <li>About</li>
             </Link>
             <Link to="/portfolio/" activeClassName={'activeLink'} onClick={this.hideCheckbox}>
               <li>Portfolio</li>
