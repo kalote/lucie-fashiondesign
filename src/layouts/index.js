@@ -1,16 +1,14 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { ThemeProvider } from 'styled-components'
 import config from '../utils/siteConfig'
 import '../styles/global'
-import theme from '../styles/theme'
 import Menu from '../components/Menu'
-import Footer from '../components/Footer'
 import favicon from '../images/favicon.ico'
 
-const Template = ({ children }) => {
+const Template = ({ children, location }) => {
+  const opacityClass = location.pathname === '/' ? 'noFilter' : 'filter'
   return (
-    <div className="siteRoot">
+    <div className={`siteRoot ${opacityClass}`}>
       <Helmet>
         <title>{config.siteTitle}</title>
         <meta charSet="utf-8" />
@@ -24,16 +22,10 @@ const Template = ({ children }) => {
         <meta property="og:site_name" content={config.siteTitle} />
       </Helmet>
 
-      <ThemeProvider theme={theme}>
-        <div className="siteContent">
-          <Menu />
-          {children()}
-        </div>
-      </ThemeProvider>
-      {/* Footer placed in seperate ThemeProvider to avoid Rendering an extra DIV in HTML output  */}
-      <ThemeProvider theme={theme}>
-        <Footer />
-      </ThemeProvider>
+      <div className="sidebar">
+        <Menu />
+      </div>
+      <div className="siteContent">{children()}</div>
     </div>
   )
 }

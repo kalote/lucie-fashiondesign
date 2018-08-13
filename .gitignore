@@ -1,9 +1,9 @@
+# Project dependencies
+.cache
 node_modules
-.cache/
-public/
+yarn-error.log
+
+# Build directory
+/public
 .DS_Store
-yarn*
-.env*
-npm-debug.log
-package-lock.json
 .contentful.json

@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-require('prismjs/themes/prism.css')
 
 const Body = styled.div`
-  margin: 0 auto;
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
+  color: #000;
+  background-color: #fff;
+  padding: 65px 10px 10px;
+  opacity: 1;
 
   h1,
   h2,
@@ -32,9 +33,9 @@ const Body = styled.div`
 
   a {
     transition: 0.2s;
-    color: ${props => props.theme.colors.base};
+    color: #fff;
     &:hover {
-      color: ${props => props.theme.colors.highlight};
+      color: #000;
     }
   }
 
@@ -77,23 +78,14 @@ const Body = styled.div`
 
   hr {
     border-style: solid;
-    border-color: ${props => props.theme.colors.secondary};
+    border-color: #afafaf;
     margin: 0 0 2em 0;
   }
 
   blockquote {
     font-style: italic;
-    border-left: 4px solid ${props => props.theme.colors.secondary};
+    border-left: 4px solid #afafaf;
     padding: 0 0 0 0.5em;
-  }
-
-  pre {
-    margin: 0 0 2em 0;
-    border-radius: 2px;
-    background: ${props => props.theme.colors.secondary} !important;
-    span {
-      background: inherit !important;
-    }
   }
 `
 

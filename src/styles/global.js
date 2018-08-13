@@ -1,10 +1,9 @@
 import { injectGlobal } from 'styled-components'
+import HPImage from '../images/homepage.jpg'
+import AvenirFont from '../font/Avenir.woff'
+import BaskerFont from '../font/LibreBaskerville-Regular.otf'
 
 injectGlobal`
-  /* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-  */
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -26,23 +25,39 @@ injectGlobal`
     vertical-align: baseline;
   }
 
-  /* Added to Fix Footer to bottom of viewport */
-  html, body {
+  body {
     height: 100%;
   }
-  .siteRoot {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  .siteContent {
-    flex: 1 0 auto;
-  }
-  footer {
-    width: 100%;
+
+  .sidebar {
+    float: left;
+    width: 250px;
+    @media only screen and (max-width: 980px) {
+      width: auto;
+    }
   }
 
-  /* End Fix to Place Footer on Bottom of Viewport */
+  .siteContent {
+    margin-left: 300px;
+    margin-top: 55px;
+
+    @media only screen and (max-width: 980px) {
+      margin-left: 0;
+    }
+  }
+
+  .siteRoot {
+    padding: 38px 0 0 38px;
+    @media only screen and (max-width: 980px) {
+      padding: 10px;
+    }
+  }
+
+  .siteRoot:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
   article, aside, details, figcaption, figure,
   footer, header, hgroup, menu, nav, section {
@@ -79,20 +94,66 @@ injectGlobal`
     box-sizing: border-box;
   }
 
+  @font-face {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: normal;
+    src: url('${AvenirFont}') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Baskerville';
+    font-style: normal;
+    font-weight: normal;
+    src: url('${BaskerFont}') format('otf');
+  }
+
   body {
-    background: white;
     line-height: 1;
     font-size: 100%;
     font-variant-ligatures: none;
     text-rendering: optimizeLegibility;
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
-    font-weight: 400;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: normal;
+    font-family: "Avenir";
   }
 
   img {
     display: block;
   	width: 100%;
   	height: auto;
+  }
+
+  .siteRoot:after {
+    content : "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url(${HPImage}) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s;
+    z-index: -1;
+
+    @media only screen and (max-width: 980px) {
+      background: url(${HPImage}) no-repeat right center; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  }
+
+  .siteRoot.noFilter:after {
+    opacity: 1;
+  }
+
+  .siteRoot.filter:after {
+    opacity: 0.6;
   }
 `

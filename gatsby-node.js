@@ -3,10 +3,10 @@ const path = require(`path`)
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
 
-  const loadPosts = new Promise((resolve, reject) => {
+  const loadGallery = new Promise((resolve, reject) => {
     graphql(`
       {
-        allContentfulPost {
+        allContentfulPhotoGallery {
           edges {
             node {
               slug
@@ -15,10 +15,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
       }
     `).then(result => {
-      result.data.allContentfulPost.edges.map(({ node }) => {
+      result.data.allContentfulPhotoGallery.edges.map(({ node }) => {
         createPage({
-          path: `${node.slug}/`,
-          component: path.resolve(`./src/templates/post.js`),
+          path: `portfolio/${node.slug}/`,
+          component: path.resolve(`./src/templates/gallery.js`),
           context: {
             slug: node.slug,
           },
@@ -28,55 +28,5 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     })
   })
 
-  const loadPages = new Promise((resolve, reject) => {
-    graphql(`
-      {
-        allContentfulPage {
-          edges {
-            node {
-              slug
-            }
-          }
-        }
-      }
-    `).then(result => {
-      result.data.allContentfulPage.edges.map(({ node }) => {
-        createPage({
-          path: `${node.slug}/`,
-          component: path.resolve(`./src/templates/page.js`),
-          context: {
-            slug: node.slug,
-          },
-        })
-      })
-      resolve()
-    })
-  })
-
-  const loadTags = new Promise((resolve, reject) => {
-    graphql(`
-      {
-        allContentfulTag {
-          edges {
-            node {
-              slug
-            }
-          }
-        }
-      }
-    `).then(result => {
-      result.data.allContentfulTag.edges.map(({ node }) => {
-        createPage({
-          path: `tag/${node.slug}/`,
-          component: path.resolve(`./src/templates/tag.js`),
-          context: {
-            slug: node.slug,
-          },
-        })
-      })
-      resolve()
-    })
-  })
-
-  return Promise.all([loadPosts, loadPages, loadTags])
+  return Promise.all([loadGallery])
 }

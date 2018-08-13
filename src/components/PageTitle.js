@@ -2,22 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Title = styled.h1`
-  font-size: ${props => (props.small ? '2em' : '3em')};
+  font-size: 1.5em;
   text-transform: capitalize;
-  font-weight: 600;
-  text-align: center;
-  margin: 0 0 3rem 0;
-  margin: ${props => (props.small ? '1rem 0 4rem 0' : '0 0 3rem 0')};
+  color: #3f3f3f;
+  opacity: 0.8;
+  text-align: left;
+  padding: 7px 30px;
+  background-color: #fff;
   line-height: 1.2;
   span {
     margin: 0 0 0 0.25em;
-  }
-  a {
-    transition: all 0.2s;
-    color: ${props => props.theme.colors.base};
-    &:hover {
-      color: ${props => props.theme.colors.highlight};
-    }
   }
 `
 
