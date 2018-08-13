@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import '../styles/global'
 import Menu from '../components/Menu'
-// import favicon from '../images/favicon.ico'
+import favicon from '../images/favicon.ico'
 
 const Template = ({ children, location }) => {
   const opacityClass = location.pathname === '/' ? 'noFilter' : 'filter'
@@ -13,7 +13,7 @@ const Template = ({ children, location }) => {
         <title>{config.siteTitle}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* <link rel="icon" href={favicon} /> */}
+        <link rel="icon" href={favicon} />
         <meta name="description" content={config.siteDescription} />
         <meta property="og:title" content={config.siteTitle} />
         <meta property="og:url" content={config.siteUrl} />
