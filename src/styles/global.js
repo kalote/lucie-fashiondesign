@@ -139,6 +139,14 @@ injectGlobal`
     height: 100%;
     transition: opacity 1s;
     z-index: -1;
+
+    @media only screen and (max-width: 980px) {
+      background: url(${HPImage}) no-repeat right center; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
   }
 
   .siteRoot.noFilter:after {

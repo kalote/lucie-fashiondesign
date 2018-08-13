@@ -21,7 +21,7 @@ const Post = styled.li`
     margin: 0 0 3vw 0;
   }
   @media screen and (min-width: 50em) {
-    flex: 0 0 24%;
+    flex: 0 0 48%;
   }
 
   a {
