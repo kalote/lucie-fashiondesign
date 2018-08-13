@@ -47,7 +47,7 @@ const Card = props => {
   return (
     <Post>
       <Link to={`/portfolio/${props.slug}/`}>
-        <Img sizes={props.image.sizes} backgroundColor={'#eeeeee'} />
+        <Img sizes={props.image.sizes} />
       </Link>
     </Post>
   )

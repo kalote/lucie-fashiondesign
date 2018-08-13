@@ -72,29 +72,29 @@ class GalleryTemplate extends Component {
   }
 
   render() {
-    // const theme = {
-    //   // container
-    //   container: {
-    //     background: 'rgba(255, 255, 255, 0.9)',
-    //   },
-    //   // arrows
-    //   arrow: {
-    //     backgroundColor: 'rgba(255, 255, 255, 0.8)',
-    //     fill: '#222',
-    //     opacity: 0.6,
-    //     transition: 'opacity 200ms',
+    const theme = {
+      //   // container
+      //   container: {
+      //     background: 'rgba(255, 255, 255, 0.9)',
+      //   },
+      //   // arrows
+      //   arrow: {
+      //     backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      //     fill: '#222',
+      //     opacity: 0.6,
+      //     transition: 'opacity 200ms',
 
-    //     ':hover': {
-    //       opacity: 1,
-    //     },
-    //   },
-    //   image: {
-    //     width: 'inherit !important',
-    //   },
-    //   header: {
-    //     display: 'none',
-    //   },
-    // }
+      //     ':hover': {
+      //       opacity: 1,
+      //     },
+      //   },
+      image: {
+        width: 'inherit !important',
+      }
+      //   header: {
+      //     display: 'none',
+      //   },
+    }
     return (
       <div>
         <Helmet>
@@ -114,7 +114,7 @@ class GalleryTemplate extends Component {
               />
             ))}
             <Lightbox
-              // theme={theme}
+              theme={theme}
               showImageCount={this.state.showImageCount}
               backdropClosesModal={this.state.backdropClosesModal}
               currentImage={this.state.currentImage}

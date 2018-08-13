@@ -43,8 +43,8 @@ export const query = graphql`
         slug
         coverImage {
           title
-          sizes(maxWidth: 1800) {
-            ...GatsbyContentfulSizes_withWebp_noBase64
+          sizes(maxWidth: 614) {
+            ...GatsbyContentfulSizes_withWebp
           }
         }
       }
