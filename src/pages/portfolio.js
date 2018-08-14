@@ -17,8 +17,8 @@ const Portfolio = ({ data }) => {
       </Helmet>
 
       <Container>
-        <PageTitle>{title}</PageTitle>
-        <CardList spaced basker>
+        <PageTitle basker>{title}</PageTitle>
+        <CardList spaced>
           {galleries.map(gallery => (
             <Card
               key={gallery.id}

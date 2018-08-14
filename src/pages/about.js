@@ -15,7 +15,7 @@ const About = ({ data }) => {
       </Helmet>
 
       <Container>
-        <PageTitle>{title}</PageTitle>
+        <PageTitle basker>{title}</PageTitle>
         <PageAbout body={body} image={image} />
       </Container>
     </div>
