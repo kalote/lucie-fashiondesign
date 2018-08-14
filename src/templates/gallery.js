@@ -150,7 +150,7 @@ export const query = graphql`
         }
       }
       companyLogo {
-        sizes(maxWidth: 100){
+        sizes(maxWidth: 150){
           ...GatsbyContentfulSizes_withWebp
         }
       }

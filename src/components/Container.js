@@ -13,7 +13,7 @@ const Wrapper = styled.section`
     & .gatsby-image-wrapper{
       margin: 0 auto;
       display: block !important;
-      width: 100px;
+      width: 150px;
     }
     & .gatsby-image-outer-wrapper {
       padding-top: 73px;
