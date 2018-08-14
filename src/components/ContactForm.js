@@ -10,7 +10,7 @@ import 'whatwg-fetch' // Fetch Polyfill
 */
 
 const Form = styled.form`
-  padding: 65px 10px 10px;
+  padding: 35px 85px 10px;
   background-color: #fff;
   display: flex;
   flex-flow: row wrap;

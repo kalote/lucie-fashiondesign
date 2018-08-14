@@ -4,9 +4,9 @@ import styled from 'styled-components'
 const List = styled.ul`
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: ${props => (props.centercontent ? 'center' : 'space-around')};
   background-color: #fff;
-  padding: ${props => (props.spaced ? '80px 10px' : '65px 10px 10px')};
+  padding: ${props => (props.spaced ? '35px 75px 80px' : (props.nopadding ? '55px 0 10px' : '65px 10px 10px'))};
 
   &::after {
     content: '';
@@ -15,7 +15,10 @@ const List = styled.ul`
 `
 
 const CardList = props => {
-  return <List spaced={props.spaced}>{props.children}</List>
+  return <List
+    spaced={props.spaced}
+    centercontent={props.centercontent}
+    nopadding={props.nopadding}>{props.children}</List>
 }
 
 export default CardList

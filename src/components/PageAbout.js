@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 const Body = styled.div`
   color: #000;
   background-color: #fff;
-  padding: 10px;
+  padding: 35px 85px;
   overflow: auto;
   display: flex;
   flex-flow: row wrap;

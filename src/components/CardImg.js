@@ -10,11 +10,10 @@ const Image = styled.li`
   cursor: pointer;
 
   @media screen and (min-width: 35em) {
-    flex: 0 0 49%;
-    margin: 0 0 3vw 0;
+    flex: 0 0 50%;
   }
   @media screen and (min-width: 50em) {
-    flex: 0 0 24%;
+    flex: 0 0 25%;
   }
 
   a {
