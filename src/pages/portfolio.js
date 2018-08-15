@@ -17,7 +17,7 @@ const Portfolio = ({ data }) => {
       </Helmet>
 
       <Container>
-        <PageTitle>{title}</PageTitle>
+        <PageTitle basker>{title}</PageTitle>
         <CardList spaced>
           {galleries.map(gallery => (
             <Card
@@ -43,7 +43,7 @@ export const query = graphql`
         slug
         coverImage {
           title
-          sizes(maxWidth: 614) {
+          sizes(maxHeight: 530) {
             ...GatsbyContentfulSizes_withWebp
           }
         }

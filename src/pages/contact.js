@@ -12,7 +12,7 @@ const Contact = () => (
     </Helmet>
 
     <Container>
-      <PageTitle>Contact</PageTitle>
+      <PageTitle basker>Contact</PageTitle>
       <ContactForm />
     </Container>
   </div>

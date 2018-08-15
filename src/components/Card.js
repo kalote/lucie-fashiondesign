@@ -15,13 +15,10 @@ const flash = keyframes`
 const Post = styled.li`
   margin: 0 0 1em 0;
   width: 100%;
+  flex: 0 0 48%;
 
-  @media screen and (min-width: 35em) {
-    flex: 0 0 49%;
-    margin: 0 0 3vw 0;
-  }
-  @media screen and (min-width: 50em) {
-    flex: 0 0 24%;
+  @media only screen and (max-width: 980px) {
+    flex: 0 0 100%;
   }
 
   a {
@@ -32,7 +29,7 @@ const Post = styled.li`
     text-decoration: none;
     opacity: 1;
     .gatsby-image-wrapper {
-      height: 0;
+      height: 530px;
       padding-bottom: 60%;
     }
     &:hover {

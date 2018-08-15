@@ -124,6 +124,7 @@ const Navigation = styled.section`
 
     nav {
       transition: all 0.4s;
+      overflow: hidden;
       height: 0;
       position: absolute;
       left: 10px;

@@ -32,22 +32,24 @@ injectGlobal`
   .sidebar {
     float: left;
     width: 250px;
+    padding-top: 38px;
     @media only screen and (max-width: 980px) {
       width: auto;
+      padding-top: 0px;
     }
   }
 
   .siteContent {
     margin-left: 300px;
-    margin-top: 55px;
 
     @media only screen and (max-width: 980px) {
       margin-left: 0;
+      margin-top: 55px;
     }
   }
 
   .siteRoot {
-    padding: 38px 0 0 38px;
+    padding-left: 38px;
     @media only screen and (max-width: 980px) {
       padding: 10px;
     }

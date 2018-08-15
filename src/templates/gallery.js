@@ -6,6 +6,7 @@ import CardList from '../components/CardList'
 import CardImg from '../components/CardImg'
 import PageTitle from '../components/PageTitle'
 import Lightbox from 'react-images'
+import Img from 'gatsby-image'
 
 class GalleryTemplate extends Component {
   constructor(props) {
@@ -103,8 +104,12 @@ class GalleryTemplate extends Component {
         </Helmet>
 
         <Container>
-          <PageTitle>{this.state.title}</PageTitle>
-          <CardList>
+          {this.state.companyLogo &&
+            <div className="company-logo">
+              <Img sizes={this.state.companyLogo.sizes} />
+            </div>}
+          <PageTitle center small>{this.state.title}</PageTitle>
+          <CardList centercontent nopadding>
             {this.state.images.map((image, i) => (
               <CardImg
                 key={i}
@@ -142,6 +147,11 @@ export const query = graphql`
       description {
         childMarkdownRemark {
           html
+        }
+      }
+      companyLogo {
+        sizes(maxWidth: 150){
+          ...GatsbyContentfulSizes_withWebp
         }
       }
       images {
