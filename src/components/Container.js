@@ -7,6 +7,7 @@ const Wrapper = styled.section`
   min-height: 100vh;
   @media only screen and (max-width: 980px) {
     margin: 0;
+    background: none;
   }
 
   & .company-logo {
@@ -17,6 +18,13 @@ const Wrapper = styled.section`
     }
     & .gatsby-image-outer-wrapper {
       padding-top: 73px;
+
+      @media only screen and (max-width: 980px) {
+        padding-top: 10px;
+      }
+    }
+    @media only screen and (max-width: 980px) {
+      background: #fff;
     }
   }
 `

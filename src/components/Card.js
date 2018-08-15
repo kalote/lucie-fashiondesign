@@ -17,6 +17,10 @@ const Post = styled.li`
   width: 100%;
   flex: 0 0 48%;
 
+  @media only screen and (max-width: 980px) {
+    flex: 0 0 100%;
+  }
+
   a {
     display: flex;
     flex-flow: column;

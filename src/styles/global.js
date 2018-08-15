@@ -35,6 +35,7 @@ injectGlobal`
     padding-top: 38px;
     @media only screen and (max-width: 980px) {
       width: auto;
+      padding-top: 0px;
     }
   }
 
@@ -43,6 +44,7 @@ injectGlobal`
 
     @media only screen and (max-width: 980px) {
       margin-left: 0;
+      margin-top: 55px;
     }
   }
 

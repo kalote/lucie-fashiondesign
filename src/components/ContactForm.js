@@ -16,6 +16,11 @@ const Form = styled.form`
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: flex-start;
+
+  @media only screen and (max-width: 980px) {
+    padding: 10px;
+  }
+
   input,
   textarea {
     font-family: inherit;

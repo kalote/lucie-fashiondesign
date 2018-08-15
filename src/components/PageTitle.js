@@ -13,6 +13,12 @@ const Title = styled.h1`
   span {
     margin: 0 0 0 0.25em;
   }
+
+  @media only screen and (max-width: 980px) {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 2px;
+  }
 `
 
 const PageTitle = props => {

@@ -6,11 +6,13 @@ import styled from 'styled-components'
 import Container from '../components/Container'
 
 const Wrapper = styled.p`
-  color: white;
+  color: #000;
   text-align: center;
   font-size: 2em;
-  padding: 0.5em;
+  padding: 35px;
+  padding-bottom: 100px;
   font-weight: 100;
+  background: #fff;
 `
 
 const NotFoundPage = () => (
@@ -20,8 +22,8 @@ const NotFoundPage = () => (
     </Helmet>
 
     <Container>
-      <PageTitle>Page not found</PageTitle>
-      <Wrapper>The page you're looking for doesn't exist (yet).</Wrapper>
+      <PageTitle basker>Page not found</PageTitle>
+      <Wrapper>The page you're looking for doesn't exist.</Wrapper>
     </Container>
   </div>
 )

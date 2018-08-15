@@ -12,6 +12,10 @@ const List = styled.ul`
     content: '';
     flex: 0 0 32%;
   }
+
+  @media only screen and (max-width: 980px) {
+    padding: 60px 10px;
+  }
 `
 
 const CardList = props => {
